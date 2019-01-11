@@ -52,6 +52,7 @@ class Betting extends BaseApi
     {
         if ($this->method == 'listMarketCatalogue' && empty($this->params[ 'maxResults' ])) {
             $this->params[ 'maxResults' ] = 1000;
+            $this->params[ 'marketProjection' ] = ['EVENT', 'RUNNER_DESCRIPTION', 'RUNNER_METADATA'];
         }
     }
 }
